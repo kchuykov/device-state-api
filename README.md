@@ -1,13 +1,13 @@
 Steps Execute test framework solution project:
 
 <code>
-bundle config set --local path '.bundle'` <br />
+bundle config set --local path '.bundle'` 
 </code><br />
 <code>
-bundle install --path .bundle <br />
-</code>
-<code><br />
-bundle exec rspec <br />
+bundle install --path .bundle 
 </code><br />
+<code>
+bundle exec rspec 
+</code>
 
 
