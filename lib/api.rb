@@ -14,7 +14,8 @@ class Api
         method: method,
         body: nil,
         headers: headers)
-    request
+    request.run
+    request.response
   end
   def self.get_device_state_by_id(id)
     request = Typhoeus::Request.new(
@@ -22,7 +23,8 @@ class Api
         method: 'GET',
         body: nil,
         headers: {})
-    request
+    request.run
+    request.response
   end
 
   def self.post_device_state(payload)
@@ -34,7 +36,8 @@ class Api
         method: method,
         body: payload.to_json,
         headers: headers)
-    request
+    request.run
+    request.response
   end
 
   def self.get_device_state_dates(act_resp)
