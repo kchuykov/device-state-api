@@ -1,0 +1,45 @@
+Api
+  GET /device_state
+    Should return 200 OK
+    Should have All device_states returned ordered by timestamp ascending
+  GET /device_state/:id
+    Should return a 200 OK if device_states are returned
+    Should return a 404 NOT FOUND and an empty body if no device_state's exist for the given id
+    All device_states returned should be ordered by timestamp ascending
+  POST /device_state
+    Should return a 200 OK if creation is successful
+    Should return a 400 BAD REQUEST if event is null (FAILED - 1)
+    Should return a 400 BAD REQUEST if device_id is null (FAILED - 2)
+    Should return a 400 BAD REQUEST if device_id and event is null (FAILED - 3)
+
+Failures:
+
+  1) Api POST /device_state Should return a 400 BAD REQUEST if event is null
+     Failure/Error: expect(response.code).to eq(400)
+     
+       expected: 400
+            got: 200
+     
+       (compared using ==)
+     # ./spec/device_state_spec.rb:66:in `block (3 levels) in <top (required)>'
+
+  2) Api POST /device_state Should return a 400 BAD REQUEST if device_id is null
+     Failure/Error: expect(response.code).to eq(400)
+     
+       expected: 400
+            got: 200
+     
+       (compared using ==)
+     # ./spec/device_state_spec.rb:75:in `block (3 levels) in <top (required)>'
+
+  3) Api POST /device_state Should return a 400 BAD REQUEST if device_id and event is null
+     Failure/Error: expect(response.code).to eq(400)
+     
+       expected: 400
+            got: 200
+     
+       (compared using ==)
+     # ./spec/device_state_spec.rb:84:in `block (3 levels) in <top (required)>'
+
+Finished in 0.99982 seconds (files took 0.99852 seconds to load)
+9 examples, 3 failures
