@@ -1,6 +1,6 @@
 Steps Execute test framework solution project:
 
-test results are in results.txt
+test results are in results.txt <br />
 <code>
 bundle config set --local path '.bundle'
 </code><br />
