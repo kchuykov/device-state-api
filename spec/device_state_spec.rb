@@ -38,7 +38,7 @@ RSpec.describe Api do
       device_id = 1
       response = Api.get_device_state_by_id(device_id)
       dates = Api.get_device_state_dates(response)
-      expect(dates.empty?).to be_falsey
+      expect(dates.length).to be > 2
       expect(dates).to eq(dates.sort)
     end
 
